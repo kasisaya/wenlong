@@ -546,6 +546,76 @@
         #back-to-top-btn:hover {
             background-color: grey;
         }
+        .skills-section {
+            max-width: 1100px;
+            text-align: center;
+        }
+        
+        .skills-subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .skills-card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .skills-card {
+            background: #f9f9f9;
+            border-radius: 18px;
+            padding: 35px 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .skills-card h2 {
+            font-size: 22px;
+            color: #111;
+            margin: 20px 0 15px;
+        }
+        
+        .skill-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        
+        .skill-tags span {
+            background: #eaf2ff;
+            color: #1d5fd0;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        body.dark-mode .skills-card {
+            background: #333;
+        }
+        
+        body.dark-mode .skills-card h2 {
+            color: white;
+        }
+        
+        body.dark-mode .skills-subtitle {
+            color: #aaa;
+        }
+        
+        body.dark-mode .skill-tags span {
+            background: #1e1e1e;
+            color: #82aaff;
+        }
+        
+        @media (max-width: 768px) {
+            .skills-card-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -720,20 +790,47 @@
         </div>
     </div>
 
-    <div id="projects" class="section">
-        <h1>Projects</h1>
-        <div class="projects-section">
-            <div class="project-card">
-                <img src="images/runnus.png" alt="Project 2">
-                <div class="project-info">
-                    <h3>RUNNUS 2023 Website</h3>
-                    <p>Updated the full-stack database website using HTML/CSS.</p>
-                    <p>Led a team as the Vice Project Director to organize a fund-raising race event of 600 participants to raise awareness and promote inclusivity of people with disabilities.</p>
-                    <a href="https://runnus.nussportsclub.org/">View Project</a>
-                </div>
+    <div id="skills" class="section skills-section">
+    <h1>My Technical Skills</h1>
+    <p class="skills-subtitle">Technologies and tools I use to build, analyze and solve problems.</p>
+
+    <div class="skills-card-container">
+        <div class="skills-card">
+            <h2>Data & Analytics</h2>
+            <div class="skill-tags">
+                <span>SQL</span>
+                <span>R</span>
+                <span>Python</span>
+                <span>Google BigQuery</span>
+            </div>
+
+            <h2>BI & Visualization</h2>
+            <div class="skill-tags">
+                <span>Tableau</span>
+                <span>Looker Studio</span>
+                <span>Power BI</span>
+            </div>
+        </div>
+
+        <div class="skills-card">
+            <h2>Development & Productivity</h2>
+            <div class="skill-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Java</span>
+            </div>
+
+            <h2>Productivity Tools</h2>
+            <div class="skill-tags">
+                <span>Microsoft Excel</span>
+                <span>PowerPoint</span>
+                <span>Microsoft Word</span>
             </div>
         </div>
     </div>
+</div>
 
     <div id="contact" class="section contact-section">
         <h1>Contact Me</h1>
